@@ -12,10 +12,12 @@ class Suco extends Bebida{
         $this->sabor = $sabor;
     }
     abstract function mostraBebida(){
-
+        $informacoes = $this->nome + "<br/>" + "<br/>" + $this->preco + 
+        "<br/>" + $this->sabor;
+        return $informacoes;
     }
     abstract function verificaPreco($preco){
-        if($preco < 5){
+        if($preco < 2,5){
             return 0;
         }
         else{

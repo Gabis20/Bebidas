@@ -12,10 +12,12 @@ class Refrigerante extends Bebida{
         $this->retornavel = $retornavel;
     }
     abstract function mostraBebida(){
-
+        $informacoes = $this->nome + "<br/>" + $this->preco + 
+        "<br/>." ;
+        return $informacoes;
     }
     abstract function verificaPreco($preco){
-        if($preco < 2,5){
+        if($preco < 5){
             return 0;
         }
         else{

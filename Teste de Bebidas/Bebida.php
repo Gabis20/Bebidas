@@ -16,6 +16,6 @@
             $this->preco = $preco;
         }
         abstract function mostraBebida();
-        abstract function verificaPreco();
+        abstract function verificaPreco($preco);
     }
 ?>

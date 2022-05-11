@@ -18,6 +18,18 @@ class Vinho extends Bebida{
     public function setTipo($tipo){
         $this->tipo = $tipo;
     }
-    
+    abstract function mostraBebida(){
+        $informacoes = $this->nome + "<br/>" + "<br/>" + $this->preco + 
+        "<br/>" + "<br/>" + $this->safra + "<br/>" + "<br/>" + $this->tipo;
+        return $informacoes;
+    }
+    abstract function verificaPreco($preco){
+        if($preco < 25){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
 }
 ?>
